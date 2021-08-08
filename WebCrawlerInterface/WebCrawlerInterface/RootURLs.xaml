@@ -1,0 +1,29 @@
+﻿<Window x:Class="WebCrawlerInterface.RootURLs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WebCrawlerInterface"
+        mc:Ignorable="d"
+           Title="Root URLs" Height="480" Loaded="Window_Loaded" Width="800" FontFamily="Bahnschrift" AllowsTransparency="True" WindowStyle="None">
+    <Grid Background="#1E1E1E">
+        <StackPanel Orientation="Vertical">
+            <StackPanel x:Name="upbar" Height="50px" Background="#21A2F1" Orientation="Horizontal" MouseDown="upbar_MouseDown">
+                <Label VerticalAlignment="Center" FontWeight="Bold" FontSize="22px">Add New Root URLs</Label>
+                <Label VerticalAlignment="Center" FontSize="22px" Margin="600,0,0,0" Cursor="Hand" MouseDown="Label_MouseDown">-</Label>
+                <Label VerticalAlignment="Center" FontSize="22px" Margin="0,0,0,0" Cursor="Hand" MouseDown="Label_MouseDown_1">x</Label>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <DataGrid Height="200px" x:Name="dgRoots"></DataGrid>
+                <StackPanel Margin="0,20,0,0" Width="300px" Orientation="Vertical">
+                    <Label HorizontalAlignment="Center" Foreground="WhiteSmoke">Add New Root URLs</Label>
+                    <TextBox x:Name="tboxRoot" Width="120px"></TextBox>
+                    <Button Margin="0,10,0,0" x:Name="btnAddRoot" Width="120px" Height="50px" Click="btnAddRoot_Click">Add Root URL</Button>
+                    <Button HorizontalAlignment="Center" Width="150px" Height="30px" Margin="0,10,0,0" Content="Go Back To The Main Page" x:Name="btnBack" Click="btnBack_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+         
+        </StackPanel>
+    </Grid>
+</Window>
